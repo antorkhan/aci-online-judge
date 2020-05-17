@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'user_submissions/create'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :user_submissions, only: [:create]
+  resources :problems, only: [:show]
+
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'

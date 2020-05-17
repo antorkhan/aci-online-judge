@@ -7,4 +7,11 @@ class ApplicationController < ActionController::Base
       @current_user = nil
     end
   end
+
+  def return_json_if_not_logged_in
+    unless @current_user
+      render json: "Not Authorized"
+    end
+  end
+
 end

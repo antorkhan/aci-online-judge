@@ -1,0 +1,7 @@
+<%= form_with model: @user_submission do |form| %>
+  <div class="form-group">
+    <%= form.text_area :code, size: "60x12" ,class: 'form-control' %>
+    <%= form.select :programming_language_id, [['C++', 1]] , {}, { :class => 'form-control mt-2' }%>
+    <%= form.submit 'Submit', class:'btn btn-primary mt-2' %>
+  </div>
+<% end %>
