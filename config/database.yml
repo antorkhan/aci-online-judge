@@ -83,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: aci_online_judge_production
-  username: aci_online_judge
-  password: <%= ENV['ACI_ONLINE_JUDGE_DATABASE_PASSWORD'] %>
+  database: aci_online_judge_development

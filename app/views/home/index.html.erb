@@ -1,7 +1,7 @@
 <div class="container text-center">
   <% if current_user %>
     Logged in as <%= current_user.email %>.
-    <%= link_to "<button>Log Out</button>".html_safe, logout_path %>
+    <%= link_to "<button class='btn'>Log Out</button>".html_safe, logout_path %>
   <% else %>
     <%= link_to "Sign Up", signup_path %> or
     <%= link_to "Log In", login_path %>
