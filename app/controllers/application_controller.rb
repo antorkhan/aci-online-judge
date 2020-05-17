@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def return_json_if_not_logged_in
     unless @current_user
-      render json: "Not Authorized"
+      render json: "Not Authorized/Session Expired"
     end
   end
 

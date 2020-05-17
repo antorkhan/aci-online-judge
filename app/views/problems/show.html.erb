@@ -1,3 +1,8 @@
-<div class="h3"><%= @problem.title %></div>
-<div><%= @problem.description %></div>
-<%= render partial: 'form_problem_submission' %>
+<div class="container">
+  <div class="h3"><%= @problem.title %></div>
+  <div><%= @problem.description %></div>
+  <iframe src="/statements/1.pdf" style="width: 100%; height: 100%">
+    This browser does not support PDFs. Please download the PDF to view it: Download PDF
+  </iframe>
+  <%= render partial: 'form_problem_submission' %>
+</div>

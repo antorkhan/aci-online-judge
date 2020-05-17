@@ -1,7 +1,9 @@
 <div class="container text-center">
   <% if current_user %>
-    Logged in as <%= current_user.email %>.
-    <%= link_to "<button class='btn'>Log Out</button>".html_safe, logout_path %>
+    <div>Total Submission: <%= @user_submission.count %></div>
+    <div>Total Accepted: <%= @user_submission.where(verdict_id: 1).count %></div>
+    <div>Total Solved: <%= @user_submission.distinct.pluck(:problem_id).compact.count %></div>
+    <%= link_to  "<button class='btn'>Problem Set</button>".html_safe, problems_path %>
 
 
 

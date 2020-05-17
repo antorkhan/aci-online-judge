@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-1">ID</div>
+    <div class="col-3">Problem Title</div>
+    <div class="col-3">Go To</div>
+  </div>
+  <% @problems.each do |problem| %>
+    <div class="row">
+      <div class="col-1"><%= problem.id %></div>
+      <div class="col-3"><%= problem.title %></div>
+      <div class="col-3"><%= link_to "View Details", problem %></div>
+    </div>
+  <% end %>
+</div>
